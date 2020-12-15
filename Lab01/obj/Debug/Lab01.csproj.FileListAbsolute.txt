@@ -1,0 +1,6 @@
+D:\HuynhMinhHoang\Lab01\Lab01\bin\Debug\Lab01.exe.config
+D:\HuynhMinhHoang\Lab01\Lab01\bin\Debug\Lab01.exe
+D:\HuynhMinhHoang\Lab01\Lab01\bin\Debug\Lab01.pdb
+D:\HuynhMinhHoang\Lab01\Lab01\obj\Debug\Lab01.csprojResolveAssemblyReference.cache
+D:\HuynhMinhHoang\Lab01\Lab01\obj\Debug\Lab01.exe
+D:\HuynhMinhHoang\Lab01\Lab01\obj\Debug\Lab01.pdb

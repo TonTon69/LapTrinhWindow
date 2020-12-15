@@ -1,0 +1,13 @@
+D:\HuynhMinhHoang\Lab01\Lab01-02\bin\Debug\Lab01-02.exe.config
+D:\HuynhMinhHoang\Lab01\Lab01-02\bin\Debug\Lab01-02.exe
+D:\HuynhMinhHoang\Lab01\Lab01-02\bin\Debug\Lab01-02.pdb
+D:\HuynhMinhHoang\Lab01\Lab01-02\obj\Debug\Lab01-02.exe
+D:\HuynhMinhHoang\Lab01\Lab01-02\obj\Debug\Lab01-02.pdb
+D:\HuynhMinhHoang\Lab01\Lab01-02\obj\Debug\Lab01-02.csprojResolveAssemblyReference.cache
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\obj\Debug\Lab01-02.csprojAssemblyReference.cache
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\obj\Debug\Lab01-02.csproj.CoreCompileInputs.cache
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\obj\Debug\Lab01-02.exe
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\obj\Debug\Lab01-02.pdb
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\bin\Debug\Lab01-02.exe.config
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\bin\Debug\Lab01-02.exe
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-02\bin\Debug\Lab01-02.pdb
