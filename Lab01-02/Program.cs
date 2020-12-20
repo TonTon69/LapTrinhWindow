@@ -25,7 +25,7 @@ namespace Lab01_02
                     st.InputStudent();
                     listPersons.Add(st);
                 }
-                if (chon == 2)
+                else if (chon == 2)
                 {
                     Console.WriteLine("\n ----Input List Teacher----");
                     Teacher te = new Teacher();
@@ -40,27 +40,27 @@ namespace Lab01_02
                 pe.Show();
             }
         }
+        private static void OutputListStudent(List<Person> listPerson)
+        {
+            foreach(Student st in listPerson){
+                st.Show();
+            }
+        }
+        private static void OutputListTeacher(List<Person> listPerson)
+        {
+            foreach(Teacher te in listPerson){
+                te.Show();
+            }
+        }
         static void Main(string[] args)
         {
-            /*Person p1 = new Person();
-            Teacher t1 = new Teacher();
-            Student s1 = new Student();
-
-            Console.WriteLine("\n ----Input Teacher----");
-            t1.InputTeacher();
-            Console.WriteLine("\n ----List Teacher----");
-            t1.OutputTeacher();
-
-            Console.WriteLine("\n ----Input Student----");
-            s1.InputStudent();
-            Console.WriteLine("\n ----List Student----");
-            s1.OutputStudent();*/
-
             List<Person> listPerson = new List<Person>();
             InputListPerson();
-            Console.WriteLine("\n ----List Person----");
+            Console.WriteLine("\n ----List Student----");
             OutputListPerson(listPerson);
             Console.ReadKey();
         }
     }
 }
+
+
