@@ -30,7 +30,7 @@ namespace Lab01_02
             MaSo = id;
             HoTen = name;
         }
-        public void Input()
+        public virtual void Input()
         {
             Console.Write("Input MaSo:");
             MaSo = Console.ReadLine();
@@ -38,7 +38,7 @@ namespace Lab01_02
             HoTen = Console.ReadLine();
         }
 
-        public void Show()
+        public virtual void Output()
         {
             Console.Write("MaSo:{0} HoTen:{1}", this.MaSo, this.HoTen);
         }

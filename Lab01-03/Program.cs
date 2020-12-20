@@ -46,6 +46,7 @@ namespace Lab01_03
             else
                 OutputListKD(listKhuDatGiavaDT);
         }
+       
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
@@ -56,7 +57,7 @@ namespace Lab01_03
             OutputListKD(listKhuDat);
 
             OutputListKDSort(listKhuDat);
-            OutputListKDGiavaDT(listKhuDat);
+        
             Console.ReadKey();
         }
     }

@@ -8,56 +8,94 @@ namespace Lab01_02
 {
     class Program
     {
-        private static void InputListPerson()
+        private static List<Person> InputListPerson()
         {
             List<Person> listPersons = new List<Person>();
-            Console.Write("Input N Person=");
+            Console.Write("Input N=");
             int N = Convert.ToInt32(Console.ReadLine());
             int chon;
-            for(int i=0; i<N; i++)
+            for (int i = 0; i < N; i++)
             {
-                Console.WriteLine("\n ----Input 1: Input List Student - Input 2: Input List Teacher----");
-                chon = Convert.ToInt32(Console.ReadLine());
-                if(chon == 1)
+                Console.WriteLine("\n --- Input 1: Input Student || Input 2: Input Teacher---");
+                chon = Int32.Parse(Console.ReadLine());
+                switch (chon)
                 {
-                    Console.WriteLine("\n ----Input List Student----");
-                    Student st = new Student();
-                    st.InputStudent();
-                    listPersons.Add(st);
-                }
-                else if (chon == 2)
-                {
-                    Console.WriteLine("\n ----Input List Teacher----");
-                    Teacher te = new Teacher();
-                    te.InputTeacher();
-                    listPersons.Add(te);
+                    case 1:
+                        Console.WriteLine("- Input Student");
+                        Student st = new Student();
+                        st.Input();
+                        listPersons.Add(st);
+                        break;
+
+                    case 2:
+                        Console.WriteLine("- Input Teacher");
+                        Teacher te = new Teacher();
+                        te.Input();
+                        listPersons.Add(te);
+                        break;
+                    default:
+                        break;
                 }    
-            }       
-        }
-        private static void OutputListPerson(List<Person> listPerson)
-        {
-            foreach(Person pe in listPerson){
-                pe.Show();
             }
+            return listPersons;
         }
-        private static void OutputListStudent(List<Person> listPerson)
+        private static void OutputListPerson(List<Person> listPersons)
         {
-            foreach(Student st in listPerson){
-                st.Show();
-            }
-        }
-        private static void OutputListTeacher(List<Person> listPerson)
-        {
-            foreach(Teacher te in listPerson){
-                te.Show();
+            foreach (Person temp in listPersons)
+            {
+                temp.Output();
             }
         }
         static void Main(string[] args)
         {
-            List<Person> listPerson = new List<Person>();
-            InputListPerson();
-            Console.WriteLine("\n ----List Student----");
-            OutputListPerson(listPerson);
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
+
+            List<Person> listPersons = InputListPerson();
+            Console.WriteLine("\n---List Person---");
+            OutputListPerson(listPersons);
+
+            //Xuat danh sach cac sinh vien thuoc khoa CNTT neu co
+            Console.WriteLine("\n---List Sinh vien thuoc khoa CNTT---");
+            List<Person> listStudentCNTT = listPersons.Where(p => ((p is Student) && (p as Student).Faculty == "CNTT")).ToList();
+            if (listStudentCNTT.Count() == 0)
+                Console.WriteLine("Khong co");
+            else
+                OutputListPerson(listStudentCNTT);
+
+            //Xuat danh sach sinh vien co dtb < 5 va thuoc khoa CNTT
+            Console.WriteLine("\n---List Sinh vien co dtb < 5 va thuoc khoa CNTT---");
+            List<Person> listStudentdtbCNTT = listPersons.Where(p => ((p is Student) && (p as Student).AverageScore < 5) && ((p is Student) && (p as Student).Faculty == "CNTT")).ToList();
+            if (listStudentdtbCNTT.Count() == 0)
+                Console.WriteLine("Khong co");
+            else
+                OutputListPerson(listStudentdtbCNTT);
+
+            //Xuat danh sach giang vien co dia chi chua thong tin Quan 9 neu co
+            Console.WriteLine("\n---List Teacher Quan 9---");
+            List<Person> listTeacherQ9 = listPersons.Where(p => ((p is Teacher) && (p as Teacher).DiaChi == "Quan 9")).ToList();
+            if (listTeacherQ9.Count() == 0)
+                Console.WriteLine("Khong co");
+            else
+                OutputListPerson(listTeacherQ9);
+
+            //Xuat thong tin giang vien co ma giang vien la CHN060286 neu co
+            Console.WriteLine("\n---Thong tin Teacher co ma giang vien la CHN060286 ---");
+            List<Person> listTeacherCHN = listPersons.Where(p => ((p is Teacher) && (p as Teacher).MaSo == "CHN060286")).ToList();
+            if (listTeacherCHN.Count() == 0)
+                Console.WriteLine("Khong co");
+            else
+                OutputListPerson(listTeacherCHN);
+
+            //Xuat danh sach sinh vien co dtb max va thuoc khoa CNTT
+            Console.WriteLine("\n---List sinh vien co dtb max va thuoc khoa CNTT ---");
+            float dtbMax = listPersons.Max(p => ((p as Student).AverageScore));
+            List<Person> listStudentDtbMaxCNTT = listPersons.Where(p => ((p is Student) && (p as Student).Faculty == "CNTT") && ((p is Student) && (p as Student).AverageScore == dtbMax)).ToList();
+            if (listStudentDtbMaxCNTT.Count() == 0)
+                Console.WriteLine("Khong co");
+            else
+                OutputListPerson(listStudentDtbMaxCNTT);
+
             Console.ReadKey();
         }
     }

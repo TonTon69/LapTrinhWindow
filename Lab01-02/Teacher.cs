@@ -23,15 +23,15 @@ namespace Lab01_02
         {
             DiaChi = address;
         }
-        public void InputTeacher()
+        public override void Input()
         {
             base.Input();
             Console.Write("Input Address:");
             DiaChi = Console.ReadLine();
         }
-        public void OutputTeacher()
+        public override void Output()
         {
-            base.Show();
+            base.Output();
             Console.WriteLine(" Address:{0}", this.DiaChi);
         }
     }

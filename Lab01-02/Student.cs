@@ -31,7 +31,7 @@ namespace Lab01_02
             AverageScore = score;
             Faculty = faculty;
         }
-        public void InputStudent()
+        public override void Input()
         {
             base.Input();
             Console.Write("Input AverageScore:");
@@ -39,9 +39,9 @@ namespace Lab01_02
             Console.Write("Input Faculty:");
             Faculty = Console.ReadLine();
         }
-        public void OutputStudent()
+        public override void Output()
         {
-            base.Show();
+            base.Output();
             Console.WriteLine(" AverageScore:{0} Faculty:{1}", this.AverageScore, this.Faculty);
         }
     }
