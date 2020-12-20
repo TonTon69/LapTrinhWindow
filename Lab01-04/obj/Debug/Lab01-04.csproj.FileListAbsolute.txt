@@ -1,0 +1,7 @@
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\bin\Debug\Lab01-04.exe.config
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\bin\Debug\Lab01-04.exe
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\bin\Debug\Lab01-04.pdb
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\obj\Debug\Lab01-04.csprojAssemblyReference.cache
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\obj\Debug\Lab01-04.csproj.CoreCompileInputs.cache
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\obj\Debug\Lab01-04.exe
+D:\IT\Lập trình trên môi trường Window\BaiTapC#\Lab01\Lab01-04\obj\Debug\Lab01-04.pdb
